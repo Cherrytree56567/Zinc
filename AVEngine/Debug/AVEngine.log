@@ -1,0 +1,12 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (AVEngine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\shlobj_core.h(814,1): warning C4005: 'CSIDL_MYMUSIC': macro redefinition
+C:\Users\ronit\Desktop\AV~~\AVEngine\main.cpp(3,1): message : see previous definition of 'CSIDL_MYMUSIC'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\shlobj_core.h(815,1): warning C4005: 'CSIDL_MYVIDEO': macro redefinition
+C:\Users\ronit\Desktop\AV~~\AVEngine\main.cpp(4,1): message : see previous definition of 'CSIDL_MYVIDEO'
+  Quarantine.cpp
+  Utilities.cpp
+C:\Users\ronit\Desktop\AV~~\AVEngine\Utilities.cpp(74,23): warning C4018: '<': signed/unsigned mismatch
+  Whitelist.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'libboost_filesystem-vc143-mt-gd-x32-1_83.lib'
