@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dapplo.Windows.Shell32</name>
+    </assembly>
+    <members>
+        <member name="T:Dapplo.Windows.Shell32.Enums.AppBarEdges">
+            <summary>
+            A value that specifies an edge of the screen.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarEdges.Left">
+            <summary>
+            Left edge.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarEdges.Top">
+            <summary>
+            Top edge.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarEdges.Right">
+            <summary>
+            Right edge.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarEdges.Bottom">
+            <summary>
+            Bottom edge.
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Enums.AppBarMessages">
+            <summary>
+            Sends an appbar message to the system.
+                See <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb762108.aspx">SHAppBarMessage function</a>
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.New">
+            <summary>
+            ABM_NEW - Registers a new appbar and specifies the message identifier that the system should use to send notification messages to the appbar.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.Remove">
+            <summary>
+            ABM_REMOVE - Unregisters an appbar, removing the bar from the system's internal list.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.QueryPosition">
+            <summary>
+            ABM_QUERYPOS - Requests a size and screen position for an appbar.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.SetPosition">
+            <summary>
+            ABM_SETPOS - Sets the size and screen position of an appbar.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.GetState">
+            <summary>
+            ABM_GETSTATE - Retrieves the autohide and always-on-top states of the Windows taskbar.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.GetTaskbarPosition">
+            <summary>
+            ABM_GETTASKBARPOS - Retrieves the bounding rectangle of the Windows taskbar. Note that this applies only to the
+            system taskbar. Other objects, particularly toolbars supplied with third-party software, also can be
+            present. As a result, some of the screen area not covered by the Windows taskbar might not be visible
+            to the user. To retrieve the area of the screen not covered by both the taskbar and other app bars—the
+            working area available to your application—, use the GetMonitorInfo function.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.Activate">
+            <summary>
+            ABM_ACTIVATE - Notifies the system to activate or deactivate an appbar. The lParam member of the APPBARDATA pointed to by pData is set to TRUE to activate or FALSE to deactivate.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.GetAutoHideAppBar">
+            <summary>
+            ABM_GETAUTOHIDEBAR - Retrieves the handle to the autohide appbar associated with a particular edge of the screen.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.SetAutohideAppBar">
+            <summary>
+            ABM_SETAUTOHIDEBAR - Registers or unregisters an autohide appbar for an edge of the screen.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.WindowPositionChanged">
+            <summary>
+            ABM_WINDOWPOSCHANGED - Notifies the system when an appbar's position has changed.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.SetState">
+            <summary>
+            ABM_SETSTATE - Windows XP and later: Sets the state of the appbar's autohide and always-on-top attributes.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.GetAutoHideAppBarExtended">
+            <summary>
+            ABM_GETAUTOHIDEBAREX - Windows XP and later: Retrieves the handle to the autohide appbar associated with a particular edge of a particular monitor.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarMessages.SetAutoHideAppBarExtended">
+            <summary>
+            ABM_SETAUTOHIDEBAREX - Windows XP and later: Registers or unregisters an autohide appbar for an edge of a particular monitor.
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Enums.AppBarStates">
+            <summary>
+            A value that specifies an edge of the screen.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarStates.None">
+            <summary>
+            ABS_MANUAL - No automatic function
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarStates.AutoHide">
+            <summary>
+            ABS_AUTOHIDE - Autohides the AppBar
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.AppBarStates.AllwaysOnTop">
+            <summary>
+            ABS_ALWAYSONTOP - Make sure the AppBar is always on top 
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags">
+            <summary>
+            A combination of one or more file attribute flags (FILE_ATTRIBUTE_ values as defined in Winnt.h).
+            If uFlags does not include the SHGFI_USEFILEATTRIBUTES flag, this parameter is ignored.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Archive">
+            <summary>
+            A file or directory that is an archive file or directory. Applications typically use this attribute to mark files for backup or removal .
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Compressed">
+            <summary>
+            A file or directory that is compressed. For a file, all of the data in the file is compressed. For a directory, compression is the default for newly created files and subdirectories.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Device">
+            <summary>
+            This value is reserved for system use.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Directory">
+            <summary>
+            The handle that identifies a directory.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Encrypted">
+            <summary>
+            A file or directory that is encrypted. For a file, all data streams in the file are encrypted. For a directory, encryption is the default for newly created files and subdirectories.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Hidden">
+            <summary>
+            The file or directory is hidden. It is not included in an ordinary directory listing.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.IntegrityStream">
+            <summary>
+            The directory or user data stream is configured with integrity (only supported on ReFS volumes). It is not included in an ordinary directory listing. The integrity setting persists with the file if it's renamed. If a file is copied the destination file will have integrity set if either the source file or destination directory have integrity set.
+            Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP: This flag is not supported until Windows Server 2012.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Normal">
+            <summary>
+            A file that does not have other attributes set. This attribute is valid only when used alone.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.NotContextIndexed">
+            <summary>
+            The file or directory is not to be indexed by the content indexing service.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.NoScrubData">
+            <summary>
+            The user data stream not to be read by the background data integrity scanner (AKA scrubber). When set on a directory it only provides inheritance. This flag is only supported on Storage Spaces and ReFS volumes. It is not included in an ordinary directory listing.
+            Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP: This flag is not supported until Windows 8 and Windows Server 2012.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Offline">
+            <summary>
+            The data of a file is not available immediately. This attribute indicates that the file data is physically moved to offline storage.
+            This attribute is used by Remote Storage, which is the hierarchical storage management software. Applications should not arbitrarily change this attribute.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Readonly">
+            <summary>
+            A file that is read-only. Applications can read the file, but cannot write to it or delete it. This attribute is not honored on directories. For more information, see You cannot view or change the Read-only or the System attributes of folders in Windows Server 2003, in Windows XP, in Windows Vista or in Windows 7.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.RecallOnDataAccess">
+            <summary>
+            When this attribute is set, it means that the file or directory is not fully present locally.
+            For a file that means that not all of its data is on local storage (e.g.it may be sparse with some data still in remote storage).
+            For a directory it means that some of the directory contents are being virtualized from another location.
+            Reading the file / enumerating the directory will be more expensive than normal, e.g. it will cause at least some of the file/directory content to be fetched from a remote store.
+            Only kernel-mode callers can set this bit.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.RecallOnOpen">
+            <summary>
+            This attribute only appears in directory enumeration classes(FILE_DIRECTORY_INFORMATION, FILE_BOTH_DIR_INFORMATION, etc.).
+            When this attribute is set, it means that the file or directory has no physical representation on the local system; the item is virtual.
+            Opening the item will be more expensive than normal, e.g.it will cause at least some of it to be fetched from a remote store.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.ReparsePoint">
+            <summary>
+            A file or directory that has an associated reparse point, or a file that is a symbolic link.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.SparseFile">
+            <summary>
+            A file that is a sparse file.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.System">
+            <summary>
+            A file or directory that the operating system uses a part of, or uses exclusively.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Temporary">
+            <summary>
+            A file that is being used for temporary storage.
+            File systems avoid writing data back to mass storage if sufficient cache memory is available, because typically, an application deletes a temporary file after the handle is closed.In that scenario, the system can entirely avoid writing the data.
+            Otherwise, the data is written after the handle is closed.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags.Virtual">
+            <summary>
+            This value is reserved for system use.
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags">
+            <summary>
+            The flags that specify the file information to retrieve when calling SHGetFileInfo.
+            This parameter can be a combination of the following values. 
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.Icon">
+            <summary>
+            Retrieve the handle to the icon that represents the file and the index of the icon within the system image list.
+            The handle is copied to the hIcon member of the structure specified by psfi, and the index is copied to the iIcon member.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.DisplayName">
+            <summary>
+            Retrieve the display name for the file, which is the name as it appears in Windows Explorer.
+            The name is copied to the szDisplayName member of the structure specified in psfi.
+            The returned display name uses the long file name, if there is one, rather than the 8.3 form of the file name.
+            Note that the display name can be affected by settings such as whether extensions are shown.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.TypeName">
+            <summary>
+            Retrieve the string that describes the file's type.
+            The string is copied to the szTypeName member of the structure specified in psfi
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.Attributes">
+            <summary>
+            Retrieve the item attributes.
+            The attributes are copied to the dwAttributes member of the structure specified in the psfi parameter.
+            These are the same attributes that are obtained from IShellFolder::GetAttributesOf.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.IconLocation">
+            <summary>
+            Retrieve the name of the file that contains the icon representing the file specified by pszPath, as returned by the IExtractIcon::GetIconLocation method of the file's icon handler.
+            Also retrieve the icon index within that file.
+            The name of the file containing the icon is copied to the szDisplayName member of the structure specified by psfi.
+            The icon's index is copied to that structure's iIcon member.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.ExeType">
+            <summary>
+            Retrieve the type of the executable file if pszPath identifies an executable file. The information is packed into the return value.
+            This flag cannot be specified with any other flags.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.SysIconIndex">
+            <summary>
+            Retrieve the index of a system image list icon.
+            If successful, the index is copied to the iIcon member of psfi.
+            The return value is a handle to the system image list.
+            Only those images whose indices are successfully copied to iIcon are valid.
+            Attempting to access other images in the system image list will result in undefined behavior.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.LinkOverlay">
+            <summary>
+            Modify SHGFI_ICON, causing the function to add the link overlay to the file's icon.
+            The SHGFI_ICON flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.Selected">
+            <summary>
+            Modify SHGFI_ICON, causing the function to blend the file's icon with the system highlight color.
+            The SHGFI_ICON flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.AttributeSpecified">
+            <summary>
+            Modify SHGFI_ATTRIBUTES to indicate that the dwAttributes member of the SHFILEINFO structure at psfi contains the specific attributes that are desired.
+            These attributes are passed to IShellFolder::GetAttributesOf.
+            If this flag is not specified, 0xFFFFFFFF is passed to IShellFolder::GetAttributesOf, requesting all attributes.
+            This flag cannot be specified with the SHGFI_ICON flag.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.LargeIcon">
+            <summary>
+            Modify SHGFI_ICON, causing the function to retrieve the file's large icon.
+            The SHGFI_ICON flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.SmallIcon">
+            <summary>
+            Modify SHGFI_ICON, causing the function to retrieve the file's small icon.
+            Also used to modify SHGFI_SYSICONINDEX, causing the function to return the handle to the system image list that contains small icon images.
+            The SHGFI_ICON and/or SHGFI_SYSICONINDEX flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.OpenIcon">
+            <summary>
+            Modify SHGFI_ICON, causing the function to retrieve the file's open icon.
+            Also used to modify SHGFI_SYSICONINDEX, causing the function to return the handle to the system image list that contains the file's small open icon.
+            A container object displays an open icon to indicate that the container is open.
+            The SHGFI_ICON and/or SHGFI_SYSICONINDEX flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.ShellIconSize">
+            <summary>
+            Modify SHGFI_ICON, causing the function to retrieve a Shell-sized icon. 
+            If this flag is not specified the function sizes the icon according to the system metric values.
+            The SHGFI_ICON flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.PointToItemIdList">
+            <summary>
+            Indicate that pszPath is the address of an ITEMIDLIST structure rather than a path name.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.UseFileAttributes">
+            <summary>
+            Indicates that the function should not attempt to access the file specified by pszPath.
+            Rather, it should act as if the file specified by pszPath exists with the file attributes passed in dwFileAttributes. 
+            This flag cannot be combined with the SHGFI_ATTRIBUTES, SHGFI_EXETYPE, or SHGFI_PIDL flags.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.AddOverlays">
+            <summary>
+            Apply the appropriate overlays to the file's icon.
+            The SHGFI_ICON flag must also be set.
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags.OverlayIndex">
+            <summary>
+            Return the index of the overlay icon.
+            The value of the overlay index is returned in the upper eight bits of the iIcon member of the structure specified by psfi.
+            This flag requires that the SHGFI_ICON be set as well.
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Shell32Api">
+            <summary>
+            An API for Shell32 functionality
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Shell32Api.TaskbarPosition">
+            <summary>
+            Returns an AppBarData struct which describes the Taskbar bounds etc
+            </summary>
+            <returns>AppBarData</returns>
+        </member>
+        <member name="M:Dapplo.Windows.Shell32.Shell32Api.SHAppBarMessage(Dapplo.Windows.Shell32.Enums.AppBarMessages,Dapplo.Windows.Shell32.Structs.AppBarData@)">
+            <summary>
+            Sends an appbar message to the system.
+            See <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb762108.aspx">SHAppBarMessage function</a>
+            </summary>
+            <param name="dwMessage">AppBarMessages - Appbar message value to send.</param>
+            <param name="pData">A pointer to an AppBarData structure. The content of the structure on entry and on exit depends on the value set in the dwMessage parameter.
+            See the individual message pages for specifics.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dapplo.Windows.Shell32.Shell32Api.SHGetFileInfo(System.String,Dapplo.Windows.Shell32.Enums.ShellFileAttributeFlags,Dapplo.Windows.Shell32.Structs.ShellFileInfo@,System.UInt32,Dapplo.Windows.Shell32.Enums.ShellGetFileInfoFlags)">
+            <summary>
+            Retrieves information about an object in the file system, such as a file, folder, directory, or drive root.
+            See <a href="https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shgetfileinfoa">SHGetFileInfo</a>
+            </summary>
+            <param name="pszPath">string
+            A pointer to a null-terminated string of maximum length MAX_PATH that contains the path and file name. Both absolute and relative paths are valid.
+            If the uFlags parameter includes the SHGFI_PIDL flag, this parameter must be the address of an ITEMIDLIST (PIDL) structure that contains the list of item identifiers that uniquely identifies the file within the Shell's namespace. The PIDL must be a fully qualified PIDL. Relative PIDLs are not allowed.
+            If the uFlags parameter includes the SHGFI_USEFILEATTRIBUTES flag, this parameter does not have to be a valid file name. The function will proceed as if the file exists with the specified name and with the file attributes passed in the dwFileAttributes parameter. This allows you to obtain information about a file type by passing just the extension for pszPath and passing FILE_ATTRIBUTE_NORMAL in dwFileAttributes.
+            This string can use either short (the 8.3 form) or long file names.
+            </param>
+            <param name="dwFileAttributes">uint
+            A combination of one or more file attribute flags (FILE_ATTRIBUTE_ values as defined in Winnt.h).
+            If uFlags does not include the SHGFI_USEFILEATTRIBUTES flag, this parameter is ignored.
+            </param>
+            <param name="psfi">ref to ShellFileInfo</param>
+            <param name="cbFileInfo">uint</param>
+            <param name="uFlags">ShellGetFileInfoFlags</param>
+            <returns>IntPtr</returns>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Structs.AppBarData">
+            <summary>
+            Contains information about a system appbar message.
+            This is used by the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb762108.aspx">SHAppBarMessage function</a>
+            </summary>
+        </member>
+        <member name="F:Dapplo.Windows.Shell32.Structs.AppBarData._cbSize">
+            <summary>
+            Size of the structure, used internally
+            </summary>
+        </member>
+        <member name="M:Dapplo.Windows.Shell32.Structs.AppBarData.SetWindowHandle(System.IntPtr)">
+            <summary>
+            Sets the handle to the appbar window.  Not all messages use this member.
+            See the individual message page to see if you need to provide an hWindow value.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.AppBarData.CallbackMessageIdentifier">
+            <summary>
+            An application-defined message identifier. The application uses the specified identifier for notification messages that it sends to the appbar identified by the hWnd member.
+            This member is used when sending the ABM_NEW message.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.AppBarData.AppBarEdge">
+            <summary>
+            This member is used when sending one of these messages:
+            ABM_GETAUTOHIDEBAR, ABM_SETAUTOHIDEBAR, ABM_GETAUTOHIDEBAREX, ABM_SETAUTOHIDEBAREX, ABM_QUERYPOS, ABM_SETPOS
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.AppBarData.Bounds">
+            <summary>
+            A RECT structure whose use varies depending on the message:
+            ABM_GETTASKBARPOS, ABM_QUERYPOS, ABM_SETPOS: The bounding rectangle, in screen coordinates, of an appbar or the Windows taskbar.
+            ABM_GETAUTOHIDEBAREX, ABM_SETAUTOHIDEBAREX: The monitor on which the operation is being performed. This information can be retrieved through the GetMonitorInfo function.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.AppBarData.AutoHide">
+            <summary>
+            Used for the ABM_SETAUTOHIDEBAR, ABM_SETAUTOHIDEBAREX message
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.AppBarData.State">
+            <summary>
+            Used for the ABM_SETAUTOHIDEBAR, ABM_SETAUTOHIDEBAREX message
+            </summary>
+        </member>
+        <member name="M:Dapplo.Windows.Shell32.Structs.AppBarData.Create">
+            <summary>
+                Gets the default (empty) value.
+            </summary>
+        </member>
+        <member name="T:Dapplo.Windows.Shell32.Structs.ShellFileInfo">
+            <summary>
+            A structure which describes shell32 info on a file
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.ShellFileInfo.IconHandle">
+            <summary>
+            A handle to the icon that represents the file.
+            You are responsible for destroying this handle with DestroyIcon when you no longer need it.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.ShellFileInfo.IconIndex">
+            <summary>
+            The index of the icon image within the system image list.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.ShellFileInfo.Attributes">
+            <summary>
+            An array of values that indicates the attributes of the file object.
+            For information about these values, see the IShellFolder::GetAttributesOf method.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.ShellFileInfo.DisplayName">
+            <summary>
+            A string that contains the name of the file as it appears in the Windows Shell, or the path and file name of the file that contains the icon representing the file.
+            </summary>
+        </member>
+        <member name="P:Dapplo.Windows.Shell32.Structs.ShellFileInfo.TypeName">
+            <summary>
+            A string that describes the type of file
+            </summary>
+        </member>
+    </members>
+</doc>

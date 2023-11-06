@@ -1,0 +1,6 @@
+YOUR YARA RULES GO HERE AS "rules.quad" AND YOUR HASHES GO HERE AS "hashes.quad", they look like so...
+
+test.zinctest/ztest SHA256HASH_HERE
+test.zinctest/ztest SHA256HASH_HERE
+test.zinctest/ztest SHA256HASH_HERE
+...

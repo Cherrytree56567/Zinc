@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zinc", "AVEngine\AVEngine.vcxproj", "{49DA14BA-D29D-4277-B868-C992D76E0857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVGUI", "AVGUI\AVGUI.csproj", "{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,18 +27,6 @@ Global
 		{49DA14BA-D29D-4277-B868-C992D76E0857}.Release|x64.Build.0 = Release|x64
 		{49DA14BA-D29D-4277-B868-C992D76E0857}.Release|x86.ActiveCfg = Release|Win32
 		{49DA14BA-D29D-4277-B868-C992D76E0857}.Release|x86.Build.0 = Release|Win32
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|x64.Build.0 = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Debug|x86.Build.0 = Debug|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|x64.ActiveCfg = Release|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|x64.Build.0 = Release|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|x86.ActiveCfg = Release|Any CPU
-		{7EF25CB7-A034-46E1-B16A-59C34E1FDD37}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

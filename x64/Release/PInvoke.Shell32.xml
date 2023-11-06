@@ -1,0 +1,1193 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PInvoke.Shell32</name>
+    </assembly>
+    <members>
+        <member name="T:PInvoke.Shell32">
+            <summary>
+            Exported functions from the Shell32.dll Windows library
+            that are available to Desktop and Store apps.
+            </summary>
+            <content>
+            Methods and nested types that are not strictly P/Invokes but provide
+            a slightly higher level of functionality to ease calling into native code.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.CSIDL"/> nested type.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.ITEMIDLIST"/> nested type.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/> nested type.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.KNOWN_FOLDER_FLAG"/> nested type.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.SHGetFolderPathFlags"/> nested type.
+            </content>
+            <content>
+            Contains the <see cref="T:PInvoke.Shell32.SHITEMID"/> nested type.
+            </content>
+            <content>
+            Exported functions from the Shell32.dll Windows library
+            that are available to Desktop apps only.
+            </content>
+            <content>
+            Methods and nested types that are not strictly P/Invokes but provide
+            a slightly higher level of functionality to ease calling into native code.
+            </content>
+            <content>
+            Exported functions from the Shell32.dll Windows library
+            that are available to Desktop apps only.
+            </content>
+            <content>
+            Methods and nested types that are not strictly P/Invokes but provide
+            a slightly higher level of functionality to ease calling into native code.
+            </content>
+        </member>
+        <member name="T:PInvoke.Shell32.CSIDL">
+            <summary>
+            CSIDL (constant special item ID list) values provide a unique system-independent way to identify special folders used frequently by applications,
+            but which may not have the same name or location on any given system. For example, the system folder may be "C:\Windows" on one system and "C:\Winnt" on another.
+            These constants are defined in Shlobj.h.
+            </summary>
+            <remarks>Used by <see cref="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/>.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_ADMINTOOLS">
+            <summary>Administrative Tools</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs\Administrative Tools</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_CDBURN_AREA">
+            <summary>Temporary Burn Folder</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Burn\Burn</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_ADMINTOOLS">
+            <summary>Administrative Tools</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Administrative Tools</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_OEM_LINKS">
+            <summary>OEM Links</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\OEM Links</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_PROGRAMS">
+            <summary>Programs</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_STARTMENU">
+            <summary>Start Menu</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_STARTUP">
+            <summary>Startup</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\StartUp</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_ALTSTARTUP">
+            <summary>Startup</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\StartUp</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_TEMPLATES">
+            <summary>Templates</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Templates</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_DRIVES">
+            <summary>Computer</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_CONNECTIONS">
+            <summary>Network Connections</summary>
+            <remarks>Maps to virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_CONTROLS">
+            <summary>Account Pictures</summary>
+            <remarks>Maps to virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COOKIES">
+            <summary>Cookies</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Cookies</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_DESKTOP">
+            <summary>Desktop</summary>
+            <remarks>Maps to %USERPROFILE%\Desktop</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_DESKTOPDIRECTORY">
+            <summary>Desktop</summary>
+            <remarks>Maps to %USERPROFILE%\Desktop</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_MYDOCUMENTS">
+            <summary>Documents</summary>
+            <remarks>Maps to %USERPROFILE%\Documents</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PERSONAL">
+            <summary>Documents</summary>
+            <remarks>Maps to %USERPROFILE%\Documents</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FAVORITES">
+            <summary>Favorites</summary>
+            <remarks>Maps to %USERPROFILE%\Favorites</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_FAVORITES">
+            <summary>Favorites</summary>
+            <remarks>Maps to %USERPROFILE%\Favorites</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FONTS">
+            <summary>Fonts</summary>
+            <remarks>Maps to %windir%\Fonts</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_HISTORY">
+            <summary>History</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\History</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_INTERNET_CACHE">
+            <summary>Temporary Internet Files</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_INTERNET">
+            <summary>The Internet</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_LOCAL_APPDATA">
+            <summary>Local</summary>
+            <remarks>Maps to %LOCALAPPDATA% (%USERPROFILE%\AppData\Local)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_RESOURCES_LOCALIZED">
+            <summary>None</summary>
+            <remarks>Maps to %windir%\resources\0409 (code page)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_MYMUSIC">
+            <summary>Music</summary>
+            <remarks>Maps to %USERPROFILE%\Music</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_NETHOOD">
+            <summary>Network Shortcuts</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Network Shortcuts</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_NETWORK">
+            <summary>Network</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMPUTERSNEARME">
+            <summary>Network</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_MYPICTURES">
+            <summary>Pictures</summary>
+            <remarks>Maps to %USERPROFILE%\Pictures</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PRINTERS">
+            <summary>Printers</summary>
+            <remarks>Maps to %USERPROFILE%\Music\Playlists</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PRINTHOOD">
+            <summary>Printer Shortcuts</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROFILE">
+            <summary>The user's username (%USERNAME%)</summary>
+            <remarks>Maps to %USERPROFILE% (%SystemDrive%\Users\%USERNAME%)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_APPDATA">
+            <summary>ProgramData</summary>
+            <remarks>Maps to %ALLUSERSPROFILE% (%ProgramData%, %SystemDrive%\ProgramData)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROGRAM_FILES">
+            <summary>Program Files</summary>
+            <remarks>Maps to %ProgramFiles% (%SystemDrive%\Program Files)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROGRAM_FILESX86">
+            <summary>Program Files</summary>
+            <remarks>Maps to %ProgramFiles% (%SystemDrive%\Program Files)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROGRAM_FILES_COMMON">
+            <summary>Common Files</summary>
+            <remarks>Maps to %ProgramFiles%\Common Files</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROGRAM_FILES_COMMONX86">
+            <summary>Common Files</summary>
+            <remarks>Maps to %ProgramFiles%\Common Files</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_PROGRAMS">
+            <summary>Programs</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_DESKTOPDIRECTORY">
+            <summary>Public Desktop</summary>
+            <remarks>Maps to %PUBLIC%\Desktop</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_DOCUMENTS">
+            <summary>Public Documents</summary>
+            <remarks>Maps to %PUBLIC%\Documents</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_MUSIC">
+            <summary>Public Music</summary>
+            <remarks>Maps to %PUBLIC%\Music</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_PICTURES">
+            <summary>Public Pictures</summary>
+            <remarks>Maps to %PUBLIC%\Pictures</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_COMMON_VIDEO">
+            <summary>Public Videos</summary>
+            <remarks>Maps to %%PUBLIC%\Videos</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_RECENT">
+            <summary>Recent Items</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Recent</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_BITBUCKET">
+            <summary>Recycle Bin</summary>
+            <remarks>virtual folder</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_RESOURCES">
+            <summary>Resources</summary>
+            <remarks>Maps to %windir%\Resources</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_APPDATA">
+            <summary>Roaming</summary>
+            <remarks>Maps to %APPDATA% (%USERPROFILE%\AppData\Roaming)</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_SENDTO">
+            <summary>SendTo</summary>
+            <remarks>Maps to %%APPDATA%\Microsoft\Windows\SendTo</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_STARTMENU">
+            <summary>Start Menu</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_STARTUP">
+            <summary>Startup</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs\StartUp</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_ALTSTARTUP">
+            <summary>Startup</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs\StartUp</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_SYSTEM">
+            <summary>System32</summary>
+            <remarks>Maps to %windir%\system32</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_SYSTEMX86">
+            <summary>System32</summary>
+            <remarks>Maps to %windir%\system32</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_TEMPLATES">
+            <summary>Templates</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Templates</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_MYVIDEO">
+            <summary>Videos</summary>
+            <remarks>Maps to %USERPROFILE%\Videos</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_WINDOWS">
+            <summary>Windows</summary>
+            <remarks>Maps to %windir%</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_CREATE">
+            <summary>
+            Combine with another CSIDL to force the creation of the associated folder if it does not exist.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_DONT_UNEXPAND">
+            <summary>
+            Combine with another CSIDL constant to ensure the expansion of environment variables.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_DONT_VERIFY">
+            <summary>
+            Combine with another CSIDL constant, except for <see cref="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_CREATE"/>, to return an unverified folder path with no attempt to create or initialize the folder.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_NO_ALIAS">
+            <summary>
+            Combine with another CSIDL constant to ensure the retrieval of the true system path for the folder, free of any aliased placeholders such as %USERPROFILE%,
+            returned by <see cref="M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,PInvoke.Shell32.ITEMIDLIST*@)"/>. This flag has no effect on paths returned by <see cref="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/>.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_PER_USER_INIT">
+            <summary>
+            Combine with another CSIDL to force the creation of the associated folder if it does not exist.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.CSIDL.CSIDL_FLAG_MASK">
+            <summary>
+            A mask for any valid CSIDL flag value.
+            </summary>
+        </member>
+        <member name="T:PInvoke.Shell32.ITEMIDLIST">
+            <summary>
+            Contains a list of item identifiers.
+            This struct must *always* be handled via pointer
+            rather than copied around because it is just the header to a native buffer.
+            </summary>
+            <remarks>Used by <see cref="M:PInvoke.Shell32.SHGetKnownFolderIDList(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,PInvoke.Shell32.ITEMIDLIST*@)"/> and <see cref="M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,PInvoke.Shell32.ITEMIDLIST*@)"/>.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.ITEMIDLIST.mkid">
+            <summary>
+            A list of item identifiers.
+            </summary>
+        </member>
+        <member name="T:PInvoke.Shell32.KNOWNFOLDERID">
+            <summary>
+            The KNOWNFOLDERID constants represent GUIDs that identify standard folders registered with the system as Known Folders.
+            These folders are installed with Windows Vista and later operating systems, and a computer will have only folders appropriate to it installed.
+            For more information see the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457.aspx">MSDN</a> value table.
+            </summary>
+            <remarks>Used by <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_AccountPictures">
+            <summary>Account Pictures.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\AccountPictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_AddNewPrograms">
+            <summary>Get Programs.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_AdminTools">
+            <summary>Administrative Tools.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs\Administrative Tools.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ApplicationShortcuts">
+            <summary>Application Shortcuts.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Application Shortcuts.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_AppsFolder">
+            <summary>Applications.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_AppUpdates">
+            <summary>Installed Updates.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CameraRoll">
+            <summary>Camera Roll.</summary>
+            <remarks>Maps to %USERPROFILE%\Pictures\Camera Roll.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CameraRollLibrary">
+            <summary>Camera Roll Library.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CDBurning">
+            <summary>Temporary Burn Folder.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Burn\Burn.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ChangeRemovePrograms">
+            <summary>Programs and Features.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonAdminTools">
+            <summary>Administrative Tools.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Administrative Tools.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonOEMLinks">
+            <summary>OEM Links.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\OEM Links.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonPrograms">
+            <summary>Programs.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonStartMenu">
+            <summary>Start Menu.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonStartup">
+            <summary>Startup.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\StartUp.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_CommonTemplates">
+            <summary>Templates.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Templates.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ComputerFolder">
+            <summary>Computer.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ConflictFolder">
+            <summary>Conflicts.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ConnectionsFolder">
+            <summary>Network Connections.</summary>
+            <remarks>Maps to virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Contacts">
+            <summary>Contacts.</summary>
+            <remarks>Maps to %USERPROFILE%\Contacts.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ControlPanelFolder">
+            <summary>Account Pictures.</summary>
+            <remarks>Maps to virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Cookies">
+            <summary>Cookies.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Cookies.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Desktop">
+            <summary>Desktop.</summary>
+            <remarks>Maps to %USERPROFILE%\Desktop.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_DeviceMetadataStore">
+            <summary>DeviceMetadataStore.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\DeviceMetadataStore.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Documents">
+            <summary>Documents.</summary>
+            <remarks>Maps to %USERPROFILE%\Documents.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_DocumentsLibrary">
+            <summary>Documents.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Libraries\Documents.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Downloads">
+            <summary>Account Pictures.</summary>
+            <remarks>Maps to %USERPROFILE%\Downloads.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Favorites">
+            <summary>Favorites.</summary>
+            <remarks>Maps to %USERPROFILE%\Favorites.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Fonts">
+            <summary>Fonts.</summary>
+            <remarks>Maps to %windir%\Fonts.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Games">
+            <summary>Games.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_GameTasks">
+            <summary>GameExplorer.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\GameExplorer.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_History">
+            <summary>History.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\History.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_HomeGroup">
+            <summary>Homegroup.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_HomeGroupCurrentUser">
+            <summary>The user's username (%USERNAME%).</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ImplicitAppShortcuts">
+            <summary>ImplicitAppShortcuts.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Internet Explorer\Quick Launch\User Pinned\ImplicitAppShortcuts.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_InternetCache">
+            <summary>Temporary Internet Files.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_InternetFolder">
+            <summary>The Internet.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Libraries">
+            <summary>Libraries.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Libraries.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Links">
+            <summary>Links.</summary>
+            <remarks>Maps to %USERPROFILE%\Links.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_LocalAppData">
+            <summary>Local.</summary>
+            <remarks>Maps to %LOCALAPPDATA% (%USERPROFILE%\AppData\Local).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_LocalAppDataLow">
+            <summary>LocalLow.</summary>
+            <remarks>Maps to %USERPROFILE%\AppData\LocalLow.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_LocalizedResourcesDir">
+            <summary>None.</summary>
+            <remarks>Maps to %windir%\resources\0409 (code page).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Music">
+            <summary>Music.</summary>
+            <remarks>Maps to %USERPROFILE%\Music.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_MusicLibrary">
+            <summary>Music.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Libraries\Music.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_NetHood">
+            <summary>Network Shortcuts.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Network Shortcuts.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_NetworkFolder">
+            <summary>Network.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_OriginalImages">
+            <summary>Original Images.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows Photo Gallery\Original Images.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PhotoAlbums">
+            <summary>Slide Shows.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\AccountPictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PicturesLibrary">
+            <summary>Pictures.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Libraries\Pictures.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Pictures">
+            <summary>Pictures.</summary>
+            <remarks>Maps to %USERPROFILE%\Pictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Playlists">
+            <summary>Playlists.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\AccountPictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PrintersFolder">
+            <summary>Printers.</summary>
+            <remarks>Maps to %USERPROFILE%\Music\Playlists.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PrintHood">
+            <summary>Printer Shortcuts.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Profile">
+            <summary>The user's username (%USERNAME%).</summary>
+            <remarks>Maps to %USERPROFILE% (%SystemDrive%\Users\%USERNAME%).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramData">
+            <summary>ProgramData.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE% (%ProgramData%, %SystemDrive%\ProgramData).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFiles">
+            <summary>Program Files.</summary>
+            <remarks>Maps to %ProgramFiles% (%SystemDrive%\Program Files).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFilesX64">
+            <summary>Program Files.</summary>
+            <remarks>Maps to %ProgramFiles% (%SystemDrive%\Program Files).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFilesX86">
+            <summary>Program Files.</summary>
+            <remarks>Maps to %ProgramFiles% (%SystemDrive%\Program Files).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFilesCommon">
+            <summary>Common Files.</summary>
+            <remarks>Maps to %ProgramFiles%\Common Files.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFilesCommonX64">
+            <summary>Common Files.</summary>
+            <remarks>Maps to %ProgramFiles%\Common Files.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ProgramFilesCommonX86">
+            <summary>Common Files.</summary>
+            <remarks>Maps to %ProgramFiles%\Common Files.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Programs">
+            <summary>Programs.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Public">
+            <summary>Public.</summary>
+            <remarks>Maps to %PUBLIC% (%SystemDrive%\Users\Public).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicDesktop">
+            <summary>Public Desktop.</summary>
+            <remarks>Maps to %PUBLIC%\Desktop.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicDocuments">
+            <summary>Public Documents.</summary>
+            <remarks>Maps to %PUBLIC%\Documents.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicDownloads">
+            <summary>Public Downloads.</summary>
+            <remarks>Maps to %PUBLIC%\Downloads.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicGameTasks">
+            <summary>GameExplorer.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\GameExplorer.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicLibraries">
+            <summary>Libraries.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Libraries.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicMusic">
+            <summary>Public Music.</summary>
+            <remarks>Maps to %PUBLIC%\Music.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicPictures">
+            <summary>Public Pictures.</summary>
+            <remarks>Maps to %PUBLIC%\Pictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicRingtones">
+            <summary>Ringtones.</summary>
+            <remarks>Maps to %ALLUSERSPROFILE%\Microsoft\Windows\Ringtones.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicUserTiles">
+            <summary>Public Account Pictures.</summary>
+            <remarks>Maps to %PUBLIC%\AccountPictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_PublicVideos">
+            <summary>Public Videos.</summary>
+            <remarks>Maps to %%PUBLIC%\Videos.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_QuickLaunch">
+            <summary>Quick Launch.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Internet Explorer\Quick Launch.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Recent">
+            <summary>Recent Items.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Recent.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RecordedTV">
+            <summary>Not used.</summary>
+            <remarks>This value is undefined as of Windows 7.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RecordedTVLibrary">
+            <summary>Recorded TV.</summary>
+            <remarks>Maps to %PUBLIC%\RecordedTV.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RecycleBinFolder">
+            <summary>Recycle Bin.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_ResourceDir">
+            <summary>Resources.</summary>
+            <remarks>Maps to %windir%\Resources.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RetailDemo">
+            <summary>Retail Demo.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_DevelopmentFiles">
+            <summary>Development Files.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Objects3D">
+            <summary>3D Objects.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Ringtones">
+            <summary>Ringtones.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\Ringtones.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RoamingAppData">
+            <summary>Roaming.</summary>
+            <remarks>Maps to %APPDATA% (%USERPROFILE%\AppData\Roaming).</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RoamedTileImages">
+            <summary>RoamedTileImages.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\RoamedTileImages.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_RoamingTiles">
+            <summary>RoamingTiles.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\RoamingTiles.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SampleMusic">
+            <summary>Sample Music.</summary>
+            <remarks>Maps to %PUBLIC%\Music\Sample Music.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SamplePictures">
+            <summary>Sample Pictures.</summary>
+            <remarks>Maps to %PUBLIC%\Pictures\Sample Pictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SamplePlaylists">
+            <summary>Sample Playlists.</summary>
+            <remarks>Maps to %PUBLIC%\Music\Sample Playlists.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SampleVideos">
+            <summary>Sample Videos.</summary>
+            <remarks>Maps to %PUBLIC%\Videos\Sample Videos.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SavedGames">
+            <summary>Saved Games.</summary>
+            <remarks>Maps to %USERPROFILE%\Saved Games.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SavedPictures">
+            <summary>Saved Pictures.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SavedPicturesLibrary">
+            <summary>Saved Pictures Library.</summary>
+            <remarks>Maps to %APPDATE%\Microsoft\Windows\Libraries\SavedPictures.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SavedSearches">
+            <summary>Saved Pictures.</summary>
+            <remarks>Maps to %USERPROFILE%\Pictures\Saved Pictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Screenshots">
+            <summary>Screenshots.</summary>
+            <remarks>Maps to %USERPROFILE%\Pictures\Screenshots.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SEARCH_CSC">
+            <summary>Offline Files.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SearchHistory">
+            <summary>History.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\ConnectedSearch\History.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SearchHome">
+            <summary>Search Results.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SEARCH_MAPI">
+            <summary>Microsoft Office Outlook.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SearchTemplates">
+            <summary>Templates.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows\ConnectedSearch\Templates.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SendTo">
+            <summary>SendTo.</summary>
+            <remarks>Maps to %%APPDATA%\Microsoft\Windows\SendTo.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SidebarDefaultParts">
+            <summary>Gadgets.</summary>
+            <remarks>Maps to %ProgramFiles%\Windows Sidebar\Gadgets.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SidebarParts">
+            <summary>Gadgets.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Microsoft\Windows Sidebar\Gadgets.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SkyDrive">
+            <summary>OneDrive.</summary>
+            <remarks>Maps to %USERPROFILE%\OneDrive.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_OneDrive">
+            <summary>OneDrive.</summary>
+            <remarks>Defined in Windows 10.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SkyDriveCameraRoll">
+            <summary>Camera Roll.</summary>
+            <remarks>Maps to %USERPROFILE%\OneDrive\Pictures\Camera Roll.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SkyDriveDocuments">
+            <summary>Documents.</summary>
+            <remarks>Maps to %USERPROFILE%\OneDrive\Documents.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SkyDrivePictures">
+            <summary>Pictures.</summary>
+            <remarks>Maps to %USERPROFILE%\OneDrive\Pictures.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_StartMenu">
+            <summary>Start Menu.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Startup">
+            <summary>Startup.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Start Menu\Programs\StartUp.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SyncManagerFolder">
+            <summary>Sync Center.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SyncResultsFolder">
+            <summary>Sync Results.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SyncSetupFolder">
+            <summary>Sync Setup.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_System">
+            <summary>System32.</summary>
+            <remarks>Maps to %windir%\system32.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_SystemX86">
+            <summary>System32.</summary>
+            <remarks>Maps to %windir%\system32.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Templates">
+            <summary>Templates.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Templates.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_TreeProperties">
+            <summary>Not used.</summary>
+            <remarks>Not used in Windows Vista. Unsupported as of Windows 7.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UserPinned">
+            <summary>User Pinned.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Internet Explorer\Quick Launch\User Pinned.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UserProfiles">
+            <summary>Users.</summary>
+            <remarks>Maps to %SystemDrive%\Users.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UserProgramFiles">
+            <summary>Programs.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Programs.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UserProgramFilesCommon">
+            <summary>Programs.</summary>
+            <remarks>Maps to %LOCALAPPDATA%\Programs\Common.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UsersFiles">
+            <summary>The user's full name entered when the user account was created.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_UsersLibraries">
+            <summary>Libraries.</summary>
+            <remarks>virtual folder.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Videos">
+            <summary>Videos.</summary>
+            <remarks>Maps to %USERPROFILE%\Videos.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_VideosLibrary">
+            <summary>Videos.</summary>
+            <remarks>Maps to %APPDATA%\Microsoft\Windows\Libraries\Videos.library-ms.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWNFOLDERID.FOLDERID_Windows">
+            <summary>Windows.</summary>
+            <remarks>Maps to %windir%.</remarks>
+        </member>
+        <member name="T:PInvoke.Shell32.KNOWN_FOLDER_FLAG">
+            <summary>Specify special retrieval options for known folders.</summary>
+            <remarks>These values supersede CSIDL values, which have parallel meanings.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.None">
+            <summary>
+            Define no flags.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_SIMPLE_IDLIST">
+            <summary>
+            Build a simple IDList (PIDL) This value can be used when you want to retrieve the file system path
+            but do not specify this value if you are retrieving the localized display name of the folder because it might not resolve correctly.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_NOT_PARENT_RELATIVE">
+            <summary>
+            Gets the folder's default path independent of the current location of its parent. <see cref="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_DEFAULT_PATH"/> must also be set.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_DEFAULT_PATH">
+            <summary>
+            Gets the default path for a known folder. If this flag is not set, the function retrieves the current—and possibly redirected—path of the folder.
+            The execution of this flag includes a verification of the folder's existence unless <see cref="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_DONT_VERIFY"/> is set.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_INIT">
+            <summary>
+            Initializes the folder using its Desktop.ini settings. If the folder cannot be initialized, the function returns a failure code and no path is returned.
+            This flag should always be combined with <see cref="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_CREATE"/>.
+            </summary>
+            <remarks>If the folder is located on a network, the function might take a longer time to execute.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_NO_ALIAS">
+            <summary>
+            Gets the true system path for the folder, free of any aliased placeholders such as %USERPROFILE%, returned by SHGetKnownFolderIDList and IKnownFolder::GetIDList.
+            This flag has no effect on paths returned by <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/> and IKnownFolder::GetPath.
+            By default, known folder retrieval functions and methods return the aliased path if an alias exists.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_DONT_UNEXPAND">
+            <summary>
+            Stores the full path in the registry without using environment strings. If this flag is not set, portions of the path may be represented by environment strings
+            such as %USERPROFILE%. This flag can only be used with SHSetKnownFolderPath and IKnownFolder::SetPath.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_DONT_VERIFY">
+            <summary>
+            Do not verify the folder's existence before attempting to retrieve the path or IDList. If this flag is not set,
+            an attempt is made to verify that the folder is truly present at the path. If that verification fails due to the folder being absent or inaccessible,
+            the function returns a failure code and no path is returned.
+            </summary>
+            <remarks>If the folder is located on a network, the function might take a longer time to execute. Setting this flag can reduce that lag time.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_CREATE">
+            <summary>
+            Forces the creation of the specified folder if that folder does not already exist. The security provisions predefined for that folder are applied.
+            If the folder does not exist and cannot be created, the function returns a failure code and no path is returned.
+            </summary>
+            <remarks>This value can be used only with the following functions and methods: <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>, SHGetKnownFolderIDList, IKnownFolder::GetIDList, IKnownFolder::GetPath, IKnownFolder::GetShellItem</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_NO_APPCONTAINER_REDIRECTION">
+            <summary>
+            When running inside an app container, or when providing an app container token, this flag prevents redirection to app container folders.
+            Instead, it retrieves the path that would be returned where it not running inside an app container.
+            </summary>
+            <remarks>Introduced in Windows 7</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.KNOWN_FOLDER_FLAG.KF_FLAG_ALIAS_ONLY">
+            <summary>
+            Return only aliased PIDLs. Do not use the file system path.
+            </summary>
+            <remarks>Introduced in Windows 7</remarks>
+        </member>
+        <member name="T:PInvoke.Shell32.SHGetFolderPathFlags">
+            <summary>Flags that specify the path to be returned. Used in cases where the folder associated with a <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/> (or CSIDL) can be moved, renamed, redirected, or roamed across languages by a user or administrator.</summary>
+        </member>
+        <member name="F:PInvoke.Shell32.SHGetFolderPathFlags.SHGFP_TYPE_CURRENT">
+            <summary>Retrieve the folder's current path.</summary>
+            <remarks>
+            The known folder system that underlies <see cref="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/> allows users or administrators to redirect a known folder to a location that suits their needs.
+            This is achieved by calling IKnownFolderManager::Redirect, which sets the "current" value of the folder associated with the SHGFP_TYPE_CURRENT flag
+            </remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.SHGetFolderPathFlags.SHGFP_TYPE_DEFAULT">
+            <summary>Retrieve the folder's default path.</summary>
+            <remarks>
+            The default value of the folder, which is the location of the folder if a user or administrator had not redirected it elsewhere,
+            is retrieved by specifying the SHGFP_TYPE_DEFAULT flag. This value can be used to implement a "restore defaults" feature for a known folder.
+            </remarks>
+        </member>
+        <member name="T:PInvoke.Shell32.SHITEMID">
+            <summary>
+            Defines an item identifier.
+            This struct must *always* be handled via pointer
+            rather than copied around because it is just the header to a native buffer.
+            </summary>
+            <remarks>Used by <see cref="T:PInvoke.Shell32.ITEMIDLIST"/>.</remarks>
+        </member>
+        <member name="F:PInvoke.Shell32.SHITEMID.cb">
+            <summary>
+            The size of identifier, in bytes, including <see cref="F:PInvoke.Shell32.SHITEMID.cb"/> itself.
+            </summary>
+        </member>
+        <member name="F:PInvoke.Shell32.SHITEMID.abID">
+            <summary>
+            A variable-length item identifier.
+            </summary>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)">
+            <summary>
+            Gets the path of a folder identified by a CSIDL value.
+            </summary>
+            <param name="hwndOwner">Reserved. Pass IntPtr.Zero.</param>
+            <param name="nFolder">
+            A <see cref="T:PInvoke.Shell32.CSIDL"/> value that identifies the folder whose path is to be retrieved.
+            Only real folders are valid. If a virtual folder is specified, this function fails.
+            You can force creation of a folder by combining the folder's <see cref="T:PInvoke.Shell32.CSIDL"/> with CSIDL_FLAG_CREATE.
+            </param>
+            <param name="hToken">
+            An access token that can be used to represent a particular user. The calling process is responsible for correct impersonation when hToken is non-NULL.
+            The calling process must have appropriate security privileges for the particular user, including TOKEN_QUERY and TOKEN_IMPERSONATE, and the user's registry hive must be currently mounted.
+            Assigning the hToken parameter a value of -1 indicates the Default User.
+            Microsoft Windows 2000 and earlier: Always set this parameter to NULL.
+            Windows XP and later: This parameter is usually set to NULL, but you might need to assign a non-NULL value to hToken for those folders
+                that can have multiple users but are treated as belonging to a single user.The most commonly used folder of this type is Documents.
+            </param>
+            <param name="dwFlags">
+            Flags that specify the path to be returned. This value is used in cases where the folder associated with a <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/> (or <see cref="T:PInvoke.Shell32.CSIDL"/>)
+            can be moved, renamed, redirected, or roamed across languages by a user or administrator.
+            The default value of the folder, which is the location of the folder if a user or administrator had not redirected it elsewhere,
+            is retrieved by specifying the <see cref="F:PInvoke.Shell32.SHGetFolderPathFlags.SHGFP_TYPE_DEFAULT"/> flag.
+            This value can be used to implement a "restore defaults" feature for a known folder.
+            </param>
+            <param name="pszPath">
+            A pointer to a null-terminated string of length MAX_PATH which will receive the path.
+            If an error occurs or <see cref="F:PInvoke.HResult.Code.S_FALSE"/> is returned, this string will be empty.
+            The returned path does not include a trailing backslash. For example, "C:\Users" is returned rather than "C:\Users\".
+            </param>
+            <returns>If this function succeeds, it returns <see cref="F:PInvoke.HResult.Code.S_OK"/>. Otherwise, it returns an <see cref="T:PInvoke.HResult"/> error code.</returns>
+            <remarks>
+            As of Windows Vista, this function is merely a wrapper for <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>.
+            The returned path does not include a trailing backslash.
+            For example, "C:\Users" is returned rather than "C:\Users\".
+            </remarks>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)">
+            <summary>
+            Gets the path of a folder identified by a CSIDL value.
+            </summary>
+            <param name="rfid">
+            A <see cref="T:System.Guid"/> value that identifies the folder whose path is to be retrieved.
+            As defined in <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/>.
+            </param>
+            <param name="dwFlags">Flags that specify special retrieval options. This value can be 0; otherwise, one or more of the <see cref="T:PInvoke.Shell32.KNOWN_FOLDER_FLAG"/> values.</param>
+            <param name="hToken">
+            An access token that represents a particular user. If this parameter is NULL, which is the most common usage, the function requests the known folder for the current user.
+            Assigning the hToken parameter a value of -1 indicates the Default User.
+            Microsoft Windows 2000 and earlier: Always set this parameter to NULL.
+            Windows XP and later: This parameter is usually set to NULL, but you might need to assign a non-NULL value to hToken for those folders that can have multiple users but are treated as belonging to a single user.The most commonly used folder of this type is Documents.
+            </param>
+            <param name="ppszPath">
+            When this method returns, contains the address of a pointer to a null-terminated Unicode string that specifies the path of the known folder.
+            The calling process is responsible for freeing this resource once it is no longer needed by calling <see cref="M:System.Runtime.InteropServices.Marshal.FreeCoTaskMem(System.IntPtr)"/>.
+            The returned path does not include a trailing backslash. For example, "C:\Users" is returned rather than "C:\Users\".
+            </param>
+            <returns>If this function succeeds, it returns <see cref="F:PInvoke.HResult.Code.S_OK"/>. Otherwise, it returns an <see cref="T:PInvoke.HResult"/> error code.</returns>
+            <remarks>
+            As of Windows Vista, this function is merely a wrapper for <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>.
+            The returned path does not include a trailing backslash.
+            For example, "C:\Users" is returned rather than "C:\Users\".
+            </remarks>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,PInvoke.Shell32.ITEMIDLIST*@)">
+            <summary>
+            Retrieves the path of a folder as an ITEMIDLIST structure.
+            </summary>
+            <param name="hwndOwner">Reserved.</param>
+            <param name="nFolder">A <see cref="T:PInvoke.Shell32.CSIDL"/> value that identifies the folder to be located. The folders associated with the CSIDLs might not exist on a particular system.</param>
+            <param name="hToken">
+            An access token that can be used to represent a particular user. It is usually set to NULL, but it may be needed when there are multiple users for those folders that are treated as belonging to a single user. The most commonly used folder of this type is My Documents. The calling application is responsible for correct impersonation when hToken is non-NULL. It must have appropriate security privileges for the particular user, and the user's registry hive must be currently mounted. See Access Control for further discussion of access control issues.
+            Assigning the hToken parameter a value of -1 indicates the Default User. This allows clients of SHGetFolderLocation to find folder locations (such as the Desktop folder) for the Default User. The Default User user profile is duplicated when any new user account is created, and includes special folders such as My Documents and Desktop. Any items added to the Default User folder also appear in any new user account.
+            </param>
+            <param name="dwReserved">Undocumented.</param>
+            <param name="pidl">The address of a pointer to an item identifier list structure that specifies the folder's location relative to the root of the namespace (the desktop). The ppidl parameter is set to NULL on failure. The calling application is responsible for freeing this resource by calling <see cref="M:PInvoke.Shell32.ILFree(System.Void*)"/>.</param>
+            <returns>
+            Returns S_OK if successful, or an error value otherwise, including the following:
+            <see cref="M:PInvoke.PInvokeExtensions.ToHResult(PInvoke.Win32ErrorCode)"/>(<see cref="F:PInvoke.Win32ErrorCode.ERROR_FILE_NOT_FOUND"/>)
+            <see cref="F:PInvoke.HResult.Code.E_INVALIDARG"/>.
+            </returns>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetKnownFolderIDList(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,PInvoke.Shell32.ITEMIDLIST*@)">
+            <summary>
+            Retrieves the path of a known folder as an ITEMIDLIST structure.
+            </summary>
+            <param name="rfid">A reference to the <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/> that identifies the folder. The folders associated with the known folder IDs might not exist on a particular system.</param>
+            <param name="dwFlags">Flags that specify special retrieval options. This value can be 0; otherwise, it is one or more of the <see cref="T:PInvoke.Shell32.KNOWN_FOLDER_FLAG"/> values.</param>
+            <param name="hToken">
+            An access token used to represent a particular user. This parameter is usually set to NULL, in which case the function tries to access the current user's instance of the folder. However, you may need to assign a value to <paramref name="hToken"/> for those folders that can have multiple users but are treated as belonging to a single user. The most commonly used folder of this type is Documents.
+            The calling application is responsible for correct impersonation when <paramref name="hToken"/> is non-null. It must have appropriate security privileges for the particular user, including TOKEN_QUERY and TOKEN_IMPERSONATE, and the user's registry hive must be currently mounted. See Access Control for further discussion of access control issues.
+            Assigning the <paramref name="hToken"/> parameter a value of -1 indicates the Default User. This allows clients of SHGetKnownFolderIDList to find folder locations (such as the Desktop folder) for the Default User. The Default User user profile is duplicated when any new user account is created, and includes special folders such as Documents and Desktop. Any items added to the Default User folder also appear in any new user account. Note that access to the Default User folders requires administrator privileges.
+            </param>
+            <param name="pidl">When this method returns, contains a pointer to the PIDL of the folder. This parameter is passed uninitialized. The caller is responsible for freeing the returned PIDL when it is no longer needed by calling <see cref="M:PInvoke.Shell32.ILFree(System.Void*)"/>.</param>
+            <returns>
+            Returns S_OK if successful, or an error value otherwise, including the following:
+            <see cref="F:PInvoke.HResult.Code.E_INVALIDARG"/>
+            Among other things, this value can indicate that the rfid parameter references a KNOWNFOLDERID that is not present on the system. Not all KNOWNFOLDERID values are present on all systems. Use IKnownFolderManager::GetFolderIds to retrieve the set of KNOWNFOLDERID values for the current system.
+            </returns>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)">
+            <summary>
+            Converts an item identifier list to a file system path.
+            </summary>
+            <param name="pidl">The address of an item identifier list that specifies a file or directory location relative to the root of the namespace (the desktop).</param>
+            <param name="pszPath">The address of a buffer to receive the file system path. This buffer must be at least MAX_PATH characters in size.</param>
+            <returns>Returns TRUE if successful; otherwise, FALSE.</returns>
+        </member>
+        <member name="M:PInvoke.Shell32.ILFree(System.Void*)">
+            <summary>
+            Frees an <see cref="T:PInvoke.Shell32.ITEMIDLIST"/> structure allocated by the Shell.
+            </summary>
+            <param name="pidl">A pointer to the <see cref="T:PInvoke.Shell32.ITEMIDLIST"/> structure to be freed. This parameter can be NULL.</param>
+            <remarks>
+            <see cref="M:PInvoke.Shell32.ILFree(System.Void*)"/> is often used with <see cref="T:PInvoke.Shell32.ITEMIDLIST"/> structures allocated by one of the other IL functions, but it can be used to free any such structure returned by the Shell—for example, the <see cref="T:PInvoke.Shell32.ITEMIDLIST"/> structure returned by SHBrowseForFolder or used in a call to <see cref="M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,PInvoke.Shell32.ITEMIDLIST*@)"/>.
+            </remarks>
+        </member>
+        <member name="M:PInvoke.Shell32.CommandLineToArgvW(System.String,System.Int32@)">
+            <summary>
+            Parses a Unicode command line string and returns an array of pointers to the command line arguments,
+            along with a count of such arguments, in a way that is similar to the standard C run-time <c>argv</c>
+            and <c>argc</c> values.
+            </summary>
+            <param name="lpCmdLine">
+            Pointer to a <see cref="T:System.String"/> that contains the full command line. If this parameter is an empty string the
+            function returns the path to the current executable file.
+            </param>
+            <param name="pNumArgs">
+            An <see cref="T:System.Int32"/> that receives the number of array elements returned, similar to <c>argc</c>.
+            </param>
+            <returns>
+            A pointer to an array of <c>LPWSTR</c> values, similar to <c>argv</c>.
+            If the function fails, the return value is <see cref="F:System.IntPtr.Zero"/>.
+            </returns>
+            <remarks>
+            <see cref="M:PInvoke.Shell32.CommandLineToArgvW(System.String,System.Int32@)"/> allocates a block of contiguous memory for pointers to the argument strings,
+            and for the argument strings themselves; the calling application must free the memory used by the argument list
+            when it is no longer needed. To free the memory, use a single call to the <see cref="M:PInvoke.Kernel32.LocalFree(System.Void*)"/> function.
+            </remarks>
+            <seealso href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb776391(v=vs.85).aspx"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderPath(PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags)">
+            <summary>
+            Gets the path of a folder identified by a CSIDL value.
+            </summary>
+            <param name="folder">
+            A <see cref="T:PInvoke.Shell32.CSIDL"/> value that identifies the folder whose path is to be retrieved.
+            Only real folders are valid. If a virtual folder is specified, this function fails.
+            You can force creation of a folder by combining the folder's <see cref="T:PInvoke.Shell32.CSIDL"/> with CSIDL_FLAG_CREATE.
+            </param>
+            <param name="hToken">
+            An access token that can be used to represent a particular user. The calling process is responsible for correct impersonation when hToken is non-NULL.
+            The calling process must have appropriate security privileges for the particular user, including TOKEN_QUERY and TOKEN_IMPERSONATE, and the user's registry hive must be currently mounted.
+            Assigning the hToken parameter a value of -1 indicates the Default User.
+            Microsoft Windows 2000 and earlier: Always set this parameter to NULL.
+            Windows XP and later: This parameter is usually set to NULL, but you might need to assign a non-NULL value to hToken for those folders
+                that can have multiple users but are treated as belonging to a single user.The most commonly used folder of this type is Documents.
+            </param>
+            <param name="flags">
+            Flags that specify the path to be returned. This value is used in cases where the folder associated with a <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/> (or <see cref="T:PInvoke.Shell32.CSIDL"/>)
+            can be moved, renamed, redirected, or roamed across languages by a user or administrator.
+            The default value of the folder, which is the location of the folder if a user or administrator had not redirected it elsewhere,
+            is retrieved by specifying the <see cref="F:PInvoke.Shell32.SHGetFolderPathFlags.SHGFP_TYPE_DEFAULT"/> flag.
+            This value can be used to implement a "restore defaults" feature for a known folder.
+            </param>
+            <returns>
+            The returned path does not include a trailing backslash. For example, "C:\Users" is returned rather than "C:\Users\".
+            </returns>
+            <remarks>
+            As of Windows Vista, this function is merely a wrapper for <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>.
+            The returned path does not include a trailing backslash.
+            For example, "C:\Users" is returned rather than "C:\Users\".
+            </remarks>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr)">
+            <summary>
+            Gets the path of a folder identified by a CSIDL value.
+            </summary>
+            <param name="rfid">
+            A <see cref="T:System.Guid"/> value that identifies the folder whose path is to be retrieved.
+            As defined in <see cref="T:PInvoke.Shell32.KNOWNFOLDERID"/>.
+            </param>
+            <param name="dwFlags">Flags that specify special retrieval options. This value can be 0; otherwise, one or more of the <see cref="T:PInvoke.Shell32.KNOWN_FOLDER_FLAG"/> values.</param>
+            <param name="hToken">
+            An access token that represents a particular user. If this parameter is NULL, which is the most common usage, the function requests the known folder for the current user.
+            Assigning the hToken parameter a value of -1 indicates the Default User.
+            Microsoft Windows 2000 and earlier: Always set this parameter to NULL.
+            Windows XP and later: This parameter is usually set to NULL, but you might need to assign a non-NULL value to hToken for those folders that can have multiple users but are treated as belonging to a single user.The most commonly used folder of this type is Documents.
+            </param>
+            <returns>
+            The returned path does not include a trailing backslash. For example, "C:\Users" is returned rather than "C:\Users\".
+            </returns>
+            <remarks>
+            As of Windows Vista, this function is merely a wrapper for <see cref="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>.
+            The returned path does not include a trailing backslash.
+            For example, "C:\Users" is returned rather than "C:\Users\".
+            </remarks>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.IntPtr)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Span{System.Char})">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char[])">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetFolderPath(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,PInvoke.Shell32.SHGetFolderPathFlags,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.IntPtr@)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetKnownFolderPath(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.Char*@)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,System.IntPtr@)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetFolderLocation(System.IntPtr,PInvoke.Shell32.CSIDL,System.IntPtr,System.Int32,PInvoke.Shell32.ITEMIDLIST*@)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetKnownFolderIDList(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,System.IntPtr@)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetKnownFolderIDList(System.Guid,PInvoke.Shell32.KNOWN_FOLDER_FLAG,System.IntPtr,PInvoke.Shell32.ITEMIDLIST*@)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(System.IntPtr,System.IntPtr)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(System.IntPtr,System.Span{System.Char})">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(System.IntPtr,System.Char[])">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Span{System.Char})">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char[])">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*,System.Char*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.ILFree(System.IntPtr)">
+            <inheritdoc cref = "M:PInvoke.Shell32.ILFree(System.Void*)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.CommandLineToArgvW_IntPtr(System.String,System.Int32@)">
+            <inheritdoc cref = "M:PInvoke.Shell32.CommandLineToArgvW(System.String,System.Int32@)"/>
+        </member>
+        <member name="M:PInvoke.Shell32.SHGetPathFromIDList(System.IntPtr)">
+            <inheritdoc cref = "M:PInvoke.Shell32.SHGetPathFromIDList(PInvoke.Shell32.ITEMIDLIST*)"/>
+        </member>
+    </members>
+</doc>
