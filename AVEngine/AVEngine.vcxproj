@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FlickZip.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Quarantine.cpp" />
     <ClCompile Include="Utilities.cpp" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="FlickZip.h" />
     <ClInclude Include="ZincHash.h" />
     <ClInclude Include="Quarantine.h" />
     <ClInclude Include="SHA256.h" />

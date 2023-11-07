@@ -10,6 +10,7 @@
 #include "Quarantine.h"
 #include "Whitelist.h"
 #include "ZincHash.h"
+#include "FlickZip.h"
 #include <string>
 #include <yara.h>
 
@@ -31,7 +32,15 @@
 */
 
 /*
-* TODO: ADD SUPPORT FOR FLICKZIP
+* Notes:
+* Make it to show "Infected." after each file which was infected
+* inside the archive and also show the archive and the file name
+* like "C:/Testing/Archive.zip/Infected.txt", also make flickzip
+* to try the file against every discompression function.
+* Also make an disinfection engine, put yara and flickzip as lib
+* and also add metadata for the quarantine system, and also make
+* it to write to the registry about the things it should show it 
+* should show in the GUI and also the options the user has.
 */
 
 /*
@@ -44,7 +53,7 @@ int main(int argc, char* argv[]) {
     /*
     * Main Code START 
     */
-    std::cout << "Zinc Engine v2 By Ronit D'silva\n";
+    std::cout << "Zinc Engine v0.0.2 By Ronit D'silva\n";
     if (argc == 1) {
         std::cout << "No Args Specified\n";
     }
@@ -96,22 +105,21 @@ int main(int argc, char* argv[]) {
             /*
             * Combine The argv[2] aka the file to scan and add double quotes around it.
             */
-            char jjjj[290] = "yara64.exe -r -p 32 -C DB/rules.quad \"";
-            strcat(jjjj, argv[2]);
-            strcat(jjjj, "\"");
+            const std::string jjjj = std::string(YaraFil) + " -r -p 32 -C " + std::string(rulesign) + " \"" + argv[2] + "\"";
             //std::cout << jjjj << std::endl;
             /*
             * Here is where we execute the yara command
             */
-            const std::string yaraouta = exec(jjjj);
-            const std::string HashOut = HashScan("C:/Users/ronit/Desktop/AV~~/x64/Debug/DB/hashes.quad", argv[2]);
-            const std::string yaraout = HashOut + yaraouta;
+            const std::string yaraouta = exec(jjjj.c_str());
+            const std::string HashOut = HashScan(hashesfil, argv[2]);
+            const std::string FZipOut = scanFlick(argv[2]);
+            const std::string yaraout = HashOut + yaraouta + FZipOut;
             /*
             * We need to split the string into vectors to get the threats recognised from the database
             */
-            std::vector<std::string> splst = split_string(yaraout, "\n");
+            const std::vector<std::string> splst = split_string(yaraout, "\n");
             //std::cout << yaraout;
-            std::vector<std::string> filarr = read_whitelista();
+            const std::vector<std::string> filarr = read_whitelista();
             /*
             * Check weather the file is whitelisted or not before declaring it as a virus or quarantining it.
             */

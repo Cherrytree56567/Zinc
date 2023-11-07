@@ -25,6 +25,9 @@
     <Filter Include="Source Files\ZincHash">
       <UniqueIdentifier>{c41d4a58-446c-43f4-a7b8-52b98085b31b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\FlickZip">
+      <UniqueIdentifier>{fef12612-e715-4396-8b28-6647b791b144}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="ZincHash.cpp">
       <Filter>Source Files\ZincHash</Filter>
+    </ClCompile>
+    <ClCompile Include="FlickZip.cpp">
+      <Filter>Source Files\FlickZip</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="ZincHash.h">
       <Filter>Source Files\ZincHash</Filter>
+    </ClInclude>
+    <ClInclude Include="FlickZip.h">
+      <Filter>Source Files\FlickZip</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
