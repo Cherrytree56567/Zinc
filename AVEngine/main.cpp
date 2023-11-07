@@ -36,7 +36,7 @@
 * Make it to show "Infected." after each file which was infected
 * inside the archive and also show the archive and the file name
 * like "C:/Testing/Archive.zip/Infected.txt", also make flickzip
-* to try the file against every discompression function.
+* to try the file against every decompression function.
 * Also make an disinfection engine, put yara and flickzip as lib
 * and also add metadata for the quarantine system, and also make
 * it to write to the registry about the things it should show it 
