@@ -49,10 +49,15 @@
 
 #include <filesystem>
 
-int main(int argc, char* argv[]) {
+int main() {
     /*
     * Main Code START 
     */
+    int argc = 3;
+    char* argv[3];
+    argv[0] = (char*)"Zinc";
+    argv[1] = (char*)"-S";
+    argv[2] = (char*)"C:/Users/ronit/Desktop/Zinc/x64/Debug/Tests";
     std::cout << "Zinc Engine v0.0.2 By Ronit D'silva\n";
     if (argc == 1) {
         std::cout << "No Args Specified\n";
@@ -110,10 +115,10 @@ int main(int argc, char* argv[]) {
             /*
             * Here is where we execute the yara command
             */
-            const std::string yaraouta = exec(jjjj.c_str());
-            const std::string HashOut = HashScan(hashesfil, argv[2]);
+            //const std::string yaraouta = exec(jjjj.c_str());
+            //const std::string HashOut = HashScan(hashesfil, argv[2]);
             const std::string FZipOut = scanFlick(argv[2]);
-            const std::string yaraout = HashOut + yaraouta + FZipOut;
+            const std::string yaraout = FZipOut;//HashOut + yaraouta + 
             /*
             * We need to split the string into vectors to get the threats recognised from the database
             */

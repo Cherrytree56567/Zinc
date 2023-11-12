@@ -1,14 +1,2 @@
 ﻿  FlickZip.cpp
-  Quarantine.cpp
-  Utilities.cpp
-C:\Users\ronit\Desktop\Zinc\AVEngine\Utilities.cpp(32,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  Whitelist.cpp
-  main.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\shlobj_core.h(814,1): warning C4005: 'CSIDL_MYMUSIC': macro redefinition
-C:\Users\ronit\Desktop\Zinc\AVEngine\main.cpp(6,1): message : see previous definition of 'CSIDL_MYMUSIC'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\shlobj_core.h(815,1): warning C4005: 'CSIDL_MYVIDEO': macro redefinition
-C:\Users\ronit\Desktop\Zinc\AVEngine\main.cpp(7,1): message : see previous definition of 'CSIDL_MYVIDEO'
-C:\Users\ronit\Desktop\Zinc\packages\libyara_vs2015.3.5.1\lib\native\include\yara\modules.h(49,1): warning C4005: '_CONCAT': macro redefinition
-C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.37.32822\include\xatomic.h(24,1): message : see previous definition of '_CONCAT'
-  Generating Code...
   AVEngine.vcxproj -> C:\Users\ronit\Desktop\Zinc\x64\Debug\Zinc.exe
